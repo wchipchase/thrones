@@ -1,4 +1,5 @@
 import characterData from '../../helpers/data/characterData';
+import './characters.scss';
 
 import util from '../../helpers/util';
 
@@ -7,7 +8,7 @@ let characters = [];
 const domStringBuilder = () => {
   let domString = '';
   characters.forEach((char) => {
-    domString += '<div>';
+    domString += `<div class="house-${char.house.toLowerCase()}">`;
     domString += '<div class="img-holder">';
     domString += `<img src=${char.imageUrl} />`;
     domString += '</div>';
